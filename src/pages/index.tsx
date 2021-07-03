@@ -8,11 +8,11 @@ const IndexPage: NextPage = () => {
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Header />
 
-			<Editor />
+      <Editor />
 
       <footer className="flex items-center justify-center w-full h-20 border-t">
         <a
-          className="flex items-center justify-center font-medium"
+          className="flex items-center justify-center font-medium text-indigo-600"
           href="https://github.com/HappyJayXin/picture-editing-tool"
           target="_blank"
           rel="noopener noreferrer"
