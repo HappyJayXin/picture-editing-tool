@@ -3,7 +3,7 @@ import ImageUploading from 'react-images-uploading';
 import Button from 'components/Button';
 
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
-import { setSource, selectImage } from 'redux/slices/images';
+import { setSource, selectImage, setIsSave } from 'redux/slices/images';
 
 const Header = () => {
   const dispatch = useAppDispatch();
@@ -12,6 +12,10 @@ const Header = () => {
   const onChange = (imageList: ImageListType) => {
     dispatch(setSource(imageList[0]));
   };
+
+	const onDownLoad = () => {
+		dispatch(setIsSave(true));
+	}
 
   return (
     <nav className="w-full bg-white py-2 md:py-4 border-b">
@@ -25,7 +29,7 @@ const Header = () => {
           id="navbar-collapse"
         >
           {image ? (
-            <Button border>下載照片</Button>
+            <Button border onClick={onDownLoad}>下載照片</Button>
           ) : (
             <ImageUploading value={[image]} onChange={onChange} dataURLKey="data_url">
               {({ onImageUpload }) => (

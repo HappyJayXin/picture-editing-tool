@@ -8,7 +8,7 @@ const ImageDownload = () => {
   const onClick = () => {
     domtoimage
       .toPng(imgRef.current)
-      .then(function (dataUrl) {
+      .then(function (dataUrl: string) {
         let link = document.createElement('a');
         link.download = 'pthr.png';
         link.href = dataUrl;
@@ -22,7 +22,7 @@ const ImageDownload = () => {
   return (
     <div className="flex flex-wrap justify-center items-center	 flex-col">
       <div ref={imgRef} className="w-6/12 sm:w-4/12 my-2 relative">
-        <img src="img01.png" alt="" />
+        <img src="logo.svg" alt="" />
         <div className="absolute bottom-1 left-1">
           <p className="text-white">PYHR</p>
         </div>
