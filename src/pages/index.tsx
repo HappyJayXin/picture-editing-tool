@@ -1,13 +1,14 @@
 import type { NextPage } from 'next';
 
-// import ImageUpload from '../features/imageUpload';
-// import ImageDownload from '../features/imageDownload';
+// import ImageDownload from 'features/imageDownload';
+import Header from 'features/header';
 
 const IndexPage: NextPage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
+			<Header />
+
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        {/* <ImageUpload /> */}
 				{/* <ImageDownload /> */}
       </main>
 

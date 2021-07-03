@@ -9,10 +9,7 @@ class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html>
-        <Head>
-          <title>Picture Editing Tool</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+				<Head />
         <body>
           <Main />
           <NextScript />

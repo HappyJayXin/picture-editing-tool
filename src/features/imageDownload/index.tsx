@@ -29,7 +29,7 @@ const ImageDownload = () => {
       </div>
 
       <div>
-        <Button onClick={onClick} text="Download" />
+        <Button onClick={onClick}>Download</Button>
       </div>
     </div>
   );

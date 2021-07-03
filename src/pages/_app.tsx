@@ -1,16 +1,23 @@
-import 'tailwindcss/tailwind.css'
+import 'tailwindcss/tailwind.css';
 
-import { Provider } from 'react-redux'
-import type { AppProps } from 'next/app'
+import Head from 'next/head';
+import { Provider } from 'react-redux';
+import type { AppProps } from 'next/app';
 
-import store from '../app/store'
+import store from '../app/store';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
-  )
+    <>
+      <Head>
+        <title>Picture Editing Tool</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
