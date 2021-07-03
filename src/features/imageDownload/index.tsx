@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import domtoimage from 'dom-to-image';
 import Button from '../../components/Button';
 

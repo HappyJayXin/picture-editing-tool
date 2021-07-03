@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { ImageListType } from 'react-images-uploading';
 import ImageUploading from 'react-images-uploading';
 import Button from 'components/Button';
 
-const Header = () => {
-  const [images, setImages] = useState([]);
+import { useAppDispatch, useAppSelector } from 'redux/hooks';
+import { setSource, selectImage } from 'redux/slices/images';
 
-  const onChange = (imageList) => {
-    setImages(imageList);
+const Header = () => {
+  const dispatch = useAppDispatch();
+  const image = useAppSelector(selectImage);
+
+  const onChange = (imageList: ImageListType) => {
+    dispatch(setSource(imageList[0]));
   };
 
   return (
@@ -20,13 +24,17 @@ const Header = () => {
           className="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0"
           id="navbar-collapse"
         >
-          <ImageUploading value={images} onChange={onChange} dataURLKey="data_url">
-            {({ onImageUpload }) => (
-              <Button border onClick={onImageUpload}>
-                上傳照片
-              </Button>
-            )}
-          </ImageUploading>
+          {image ? (
+            <Button border>下載照片</Button>
+          ) : (
+            <ImageUploading value={[image]} onChange={onChange} dataURLKey="data_url">
+              {({ onImageUpload }) => (
+                <Button border onClick={onImageUpload}>
+                  上傳照片
+                </Button>
+              )}
+            </ImageUploading>
+          )}
         </div>
       </div>
     </nav>
