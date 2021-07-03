@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import ImageUpload from '../features/imageUpload';
+// import ImageUpload from '../features/imageUpload';
+// import ImageDownload from '../features/imageDownload';
 
 const IndexPage: NextPage = () => {
   return (
@@ -12,7 +13,8 @@ const IndexPage: NextPage = () => {
       </Head>
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <ImageUpload />
+        {/* <ImageUpload /> */}
+				{/* <ImageDownload /> */}
       </main>
 
       <footer className="flex items-center justify-center w-full h-24 border-t">
