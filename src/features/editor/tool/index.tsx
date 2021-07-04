@@ -6,7 +6,6 @@ const Icon = ({ Component }) => (
   </div>
 );
 
-// TODO: event
 const Tool = () => {
   return (
     <section className="w-16">

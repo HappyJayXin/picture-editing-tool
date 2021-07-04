@@ -1,4 +1,4 @@
-import { classnames } from 'tailwindcss-classnames';
+import classnames from 'classnames';
 
 const buttonStyle = classnames(
 	'p-2',
