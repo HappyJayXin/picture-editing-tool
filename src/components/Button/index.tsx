@@ -9,14 +9,23 @@ type Props = {
   href?: string;
 };
 
-const Button = ({ border = false, active = false, children, onClick, href }: Props) => (
+const Button = ({
+  border = false,
+  active = false,
+  children,
+  onClick,
+  href,
+}: Props) => (
   <>
     {href ? (
-      <a href="#" className={styles.button({ border, active })}>
+      <a href={href} className={styles.button({ border, active })}>
         {children}
       </a>
     ) : (
-      <button onClick={onClick} className={styles.button({ border, active })} type="button">
+      <button
+        onClick={onClick}
+        className={styles.button({ border, active })}
+        type="button">
         {children}
       </button>
     )}
