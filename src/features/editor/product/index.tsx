@@ -27,9 +27,10 @@ const Product = forwardRef<HTMLDivElement, Props>(({ image }, ref) => {
         </Text>
       </div>
 
-      <div className="absolute inset-x-0 top-24 text-center flex justify-evenly	">
+      <div className="absolute inset-x-0 top-24 text-center flex justify-evenly">
         {text.map((t) => (
           <div
+            key={t}
             className="rounded-lg border-black py-2 px-7 text-3xl bg-blue-400 text-white"
             style={itemStyle}>
             <Text>{t}</Text>

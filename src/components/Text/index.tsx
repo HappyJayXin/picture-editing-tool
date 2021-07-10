@@ -1,4 +1,4 @@
-import { createElement, ReactChild, CSSProperties } from 'react';
+import {createElement, ReactChild, CSSProperties} from 'react';
 import classnames from 'classnames';
 import * as styles from './styles';
 
@@ -9,11 +9,11 @@ type Props = {
   style?: CSSProperties;
 };
 
-const Text = ({ children, as = 'div', className, style }: Props) => {
+const Text = ({children, as = 'div', className, style}: Props) => {
   return createElement(
-    as,
-    { style, className: classnames(styles.text, className) },
-    children
+      as,
+      {style, className: classnames(styles.text, className)},
+      children,
   );
 };
 
