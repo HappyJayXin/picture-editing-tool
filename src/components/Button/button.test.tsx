@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import Button from './index';
 
 describe('<Button />', () => {
@@ -8,12 +8,12 @@ describe('<Button />', () => {
   });
 
   test('render a element', () => {
-    const { container } = render(<Button href="#">Hello World!</Button>);
+    const {container} = render(<Button href="#">Hello World!</Button>);
     expect(container.querySelector('a')).toBeInTheDocument();
   });
 
   test('should render button element', () => {
-    const { container } = render(<Button>Hello World!</Button>);
+    const {container} = render(<Button>Hello World!</Button>);
     expect(container.querySelector('button')).toBeInTheDocument();
   });
 });

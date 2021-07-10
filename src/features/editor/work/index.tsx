@@ -1,8 +1,8 @@
-import { useRef, useEffect, useCallback } from 'react';
+import {useRef, useEffect, useCallback} from 'react';
 import domtoimage from 'dom-to-image';
 
-import { useAppSelector, useAppDispatch } from 'redux/hooks';
-import { selectImage, setIsSave, selectIsSave } from 'redux/slices/images';
+import {useAppSelector, useAppDispatch} from 'redux/hooks';
+import {selectImage, setIsSave, selectIsSave} from 'redux/slices/images';
 
 import Product from '../product';
 
@@ -14,22 +14,22 @@ const Work = () => {
   const isSave = useAppSelector(selectIsSave);
 
   const handleDownload = useCallback(
-    (callback) => {
-      domtoimage
-        .toPng(imgRef?.current)
-        .then(function (dataUrl: string) {
-          let link = document.createElement('a');
-          link.download = image.file.name;
-          link.href = dataUrl;
-          link.click();
-          callback();
-        })
-        .catch(function (error) {
-          console.error('oops, something went wrong!', error);
-          callback();
-        });
-    },
-    [imgRef, image]
+      (callback) => {
+        domtoimage
+            .toPng(imgRef?.current)
+            .then(function(dataUrl: string) {
+              const link = document.createElement('a');
+              link.download = image.file.name;
+              link.href = dataUrl;
+              link.click();
+              callback();
+            })
+            .catch(function(error) {
+              console.error('oops, something went wrong!', error);
+              callback();
+            });
+      },
+      [imgRef, image],
   );
 
   useEffect(() => {
