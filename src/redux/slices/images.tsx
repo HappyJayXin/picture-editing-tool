@@ -1,6 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ImageType } from 'react-images-uploading';
-import { AppState } from '../store';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {ImageType} from 'react-images-uploading';
+import {AppState} from '../store';
 
 interface ImagesState {
   source: ImageType | null;
@@ -25,7 +25,7 @@ export const userSlice = createSlice({
   },
 });
 
-export const { setSource, setIsSave } = userSlice.actions;
+export const {setSource, setIsSave} = userSlice.actions;
 
 export const selectImage = (state: AppState) => state.images.source;
 export const selectIsSave = (state: AppState) => state.images.isSave;

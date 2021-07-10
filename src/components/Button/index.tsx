@@ -1,4 +1,4 @@
-import { ReactChild } from 'react';
+import {ReactChild} from 'react';
 import * as styles from './styles';
 
 type Props = {
@@ -18,13 +18,13 @@ const Button = ({
 }: Props) => (
   <>
     {href ? (
-      <a href={href} className={styles.button({ border, active })}>
+      <a href={href} className={styles.button({border, active})}>
         {children}
       </a>
     ) : (
       <button
         onClick={onClick}
-        className={styles.button({ border, active })}
+        className={styles.button({border, active})}
         type="button">
         {children}
       </button>

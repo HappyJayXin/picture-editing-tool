@@ -29,7 +29,7 @@ const Product = forwardRef<HTMLDivElement, Props>(({ image }, ref) => {
       <section className="absolute bottom-8 left-5 h-1/4 w-96">
         <div className="flex flex-col justify-center absolute left-1/2 top-0 transform -translate-x-1/2">
           {checkTxt.map((txt) => (
-            <label className="inline-flex items-center mb-3 relative">
+            <label key={txt} className="inline-flex items-center mb-3 relative">
               <MdCheckCircle className="text-4xl text-arapawa z-10" />
               <Text
                 as="span"
