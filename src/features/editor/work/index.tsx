@@ -4,7 +4,7 @@ import domtoimage from 'dom-to-image';
 import { useAppSelector, useAppDispatch } from 'redux/hooks';
 import { selectImage, setIsSave, selectIsSave } from 'redux/slices/images';
 
-import Product from './Product02';
+import Product from '../product';
 
 const Work = () => {
   const imgRef = useRef<HTMLDivElement>(null);
