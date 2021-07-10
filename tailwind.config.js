@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   mode: 'jit',
   purge: [
@@ -8,9 +10,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      notoSans: ['Noto Sans TC']
+      notoSans: ['Noto Sans TC'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        chinook: '#9dd3a8',
+        arapawa: '#204969',
+      },
+    },
   },
   variants: {
     extend: {},

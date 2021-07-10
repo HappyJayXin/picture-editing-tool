@@ -4,7 +4,7 @@ import domtoimage from 'dom-to-image';
 import { useAppSelector, useAppDispatch } from 'redux/hooks';
 import { selectImage, setIsSave, selectIsSave } from 'redux/slices/images';
 
-import Product from './Product01';
+import Product from './Product02';
 
 const Work = () => {
   const imgRef = useRef<HTMLDivElement>(null);
@@ -42,7 +42,11 @@ const Work = () => {
 
   return (
     <section className="flex items-center justify-center w-full">
-      {image && <Product ref={imgRef} image={image} />}
+      {image && (
+        <div className="w-7/12 xl:w-5/12 2xl:w-4/12 relative">
+          <Product ref={imgRef} image={image} />
+        </div>
+      )}
     </section>
   );
 };

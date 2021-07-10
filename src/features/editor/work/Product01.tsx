@@ -11,7 +11,7 @@ const itemStyle = {
 };
 
 type Props = {
-	image: ImageType
+  image: ImageType;
 };
 
 // Product: 保濕護髮 捲髮乳
@@ -19,7 +19,7 @@ const Product01 = forwardRef<HTMLDivElement, Props>(({ image }, ref) => {
   const text = ['捲髮乳', '保濕蜜'];
 
   return (
-    <div ref={ref} className="w-12/12 sm:w-3/12 relative border-8 border-black">
+    <div ref={ref} className="border-8 border-black">
       <img src={image['data_url']} alt="" />
 
       <div className="absolute inset-x-0 top-5 h-16 text-center">
@@ -32,8 +32,7 @@ const Product01 = forwardRef<HTMLDivElement, Props>(({ image }, ref) => {
         {text.map((t) => (
           <div
             className="rounded-lg border-black py-2 px-7 text-3xl bg-blue-400 text-white"
-            style={itemStyle}
-          >
+            style={itemStyle}>
             <Text>{t}</Text>
           </div>
         ))}
