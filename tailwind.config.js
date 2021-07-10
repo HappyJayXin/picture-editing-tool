@@ -13,10 +13,7 @@ module.exports = {
       notoSans: ['Noto Sans TC'],
     },
     extend: {
-      colors: {
-        chinook: '#9dd3a8',
-        arapawa: '#204969',
-      },
+      colors: {},
     },
   },
   variants: {
